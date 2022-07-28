@@ -1,10 +1,22 @@
-import React from 'react'
+import React from 'react';
+import {useDispatch} from 'react-redux';
 
 function Material() {
 
+    const dispatch = useDispatch();
 
     const handleCabinetMaterialChange = (e) => {
-        console.log(e.target.value)
+        dispatch({
+            type : 'SET_CABINET_MATERIAL',
+            payload : e.target.value
+        });
+    }
+
+    const handleShutterMaterialChange = (e) => {
+        dispatch({
+            type : 'SET_SHUTTER_MATERIAL',
+            payload : e.target.value
+        });
     }
 
   return (
@@ -13,8 +25,8 @@ function Material() {
         Cabinet Material
         </label>
         <select onChange={handleCabinetMaterialChange} >
-                    <option >5</option>
-                    <option >6</option>
+                    <option > Particle Board</option>
+                    <option > BWP-Ply</option>
                    
         </select>
         
@@ -23,7 +35,15 @@ function Material() {
         <label>
         Shutter Material
         </label>
-        <input name="itemName" type="text"/>
+        <select onChange={handleShutterMaterialChange} >
+                    <option > Particle Board Matte Laminate </option>
+                    <option > BWP-Ply Matte Laminate </option>
+                    <option > Particle Board Gloss Laminate </option>
+                    <option > MDF Matte Membrane </option>
+                    <option > BWP-Ply Gloss Laminate </option>
+                    <option > MDF Gloss Membrane </option>
+                   
+        </select>
     
         <br/>
 

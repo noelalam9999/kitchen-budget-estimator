@@ -1,70 +1,56 @@
-# Getting Started with Create React App
+## Project name
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Kitchen Budget Estimator
 
-## Available Scripts
+## Repository
 
-In the project directory, you can run:
+(https://github.com/noelalam9999/kitchen-budget-estimator)
 
-### `npm start`
+**Answer:**
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## One liner
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+An SPA to estimate the cost of building a new kitchen shelf and countertop
 
-### `npm test`
+**Answer:**
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Project description
 
-### `npm run build`
+This web app allows user to input the shape of their kitchen and its dimentions so that they can calculate the cost of building their new kitchen countertop and shelf. 
+It allows users to input their preffered material for shutter and body and also add accessories like drawers, sinks etc.  
+**Answer:**
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## MVP
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+* There will be only one type of user - the visitor of the page
+* User should be able to input shape of their kitchen
+* User should be able to input dimentions of their kitchen
+* User should be able to input the type of material with which his product will be manufactured
+* User should be able to input the accessories he wants to add to his products
+* As output the user should be able to see the price of his desired product
+* The data should persist in the browser 
+* The user should be barred from adding accessories if his kitchens dimensions doesnt allow him to add them. 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+**Answer:**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Tech stack
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+**Front End:**
+React.js 
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+**Back End:**
+Express
+MongoDB
 
-## Learn More
+## Data sources
+Pictures and material prices from : 
+https://www.homelane.com/cost-calculator/modular-kitchen/ [I will download the data from the sources and serve them from my server]
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Resources 
+The select boxes 
+https://codesandbox.io/s/stoic-cohen-d7cyj?fontsize=14&hidenavigation=1&theme=dark
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+The redux
+https://redux.js.org/tutorials/fundamentals/part-5-ui-react

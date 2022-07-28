@@ -13,11 +13,28 @@ function Wall() {
             type : 'SET_SHAPE',
             payload : e.target.value
         });
-        
+
+    }
+
+    const handleWallAChange = (e) => {
+        dispatch({
+            type : 'SET_WALL_A',
+            payload : e.target.value
+        });
     }
 
     const handleWallBChange = (e) => {
-        console.log(e.target.value)
+        dispatch({
+            type : 'SET_WALL_B',
+            payload : e.target.value
+        });
+    }
+
+    const handleWallCChange = (e) => {
+        dispatch({
+            type : 'SET_WALL_C',
+            payload : e.target.value
+        });
     }
 
   return (
@@ -36,7 +53,7 @@ function Wall() {
             <label>
             Wall A
             </label>
-            <select onChange={handleWallBChange} >
+            <select onChange={handleWallAChange} >
                     <option >5</option>
                     <option >6</option>
                     <option >7</option>
@@ -57,7 +74,7 @@ function Wall() {
              <br/>          
 
 
-           {  shape == "u-shaped"    &&
+           {  (shape === "u-shaped" || "parallel" || "l-shaped")   &&
             <>
                 <label>
                   Wall B
@@ -82,62 +99,13 @@ function Wall() {
                 </select>
             </>
            } 
-               {  shape == "parallel"    &&
-            <>
-                <label>
-                  Wall B
-                </label>
-                <select onChange={handleWallBChange} >
-                    <option >5</option>
-                    <option >6</option>
-                    <option >7</option>
-                    <option >8</option>
-                    <option >9</option>
-                    <option >10</option>
-                    <option >11</option>
-                    <option >12</option>
-                    <option >13</option>
-                    <option >14</option>
-                    <option >15</option>
-                    <option >16</option>
-                    <option >17</option>
-                    <option >18</option>
-                    <option >19</option>
-                    <option >20</option>
-                </select>
-            </>
-           } 
-               {  shape == "l-shaped"    &&
-            <>
-                <label>
-                  Wall B
-                </label>
-                <select onChange={handleWallBChange} >
-                    <option >5</option>
-                    <option >6</option>
-                    <option >7</option>
-                    <option >8</option>
-                    <option >9</option>
-                    <option >10</option>
-                    <option >11</option>
-                    <option >12</option>
-                    <option >13</option>
-                    <option >14</option>
-                    <option >15</option>
-                    <option >16</option>
-                    <option >17</option>
-                    <option >18</option>
-                    <option >19</option>
-                    <option >20</option>
-                </select>
-            </>
-           } 
+     
 
-           { shape =="u-shaped" && <>
+           { shape ==="u-shaped" && <>
             <br/><label>
             Wall C
             </label>
-            <select onChange={handleWallBChange} >
+            <select onChange={handleWallCChange} >
                     <option >5</option>
                     <option >6</option>
                     <option >7</option>
