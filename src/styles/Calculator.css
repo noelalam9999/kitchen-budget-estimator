@@ -1,0 +1,13 @@
+.calculator{
+    display: flex;
+}
+
+.form{
+    min-width: 30vw;
+    margin : 10vh 10vw
+}
+
+.cost-card{
+    min-width:30vw;
+    margin: 10vh 10vw
+}
