@@ -9,15 +9,13 @@ function Wall() {
     const wallB = useSelector((state)=>state.wallB);
     const wallC = useSelector((state)=>state.wallC);
 
-    const cabinet = useSelector((state)=>state.cabinet);
-    const shutter = useSelector((state)=>state.shutter);
 
     return (
     <>
           <p>Shape : {shape}</p>
 
           <p>Wall A : {wallA}</p>
-          <p>Cost : {wallA}</p>
+          
     
 
     { 
@@ -28,9 +26,7 @@ function Wall() {
     { shape === "u-shaped" && 
           <p> Wall C : {wallC} </p>
     }
-          <p> Cabinet Material : {cabinet} </p>
-          <p> Shutter Material : {shutter} </p>
-          <p> Cost of Wall A : {shutter} </p>
+        
 
     </>
   )

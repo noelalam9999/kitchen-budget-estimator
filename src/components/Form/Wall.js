@@ -6,7 +6,7 @@ function Wall() {
  
 
     const dispatch = useDispatch();
-    const shape = useSelector((state)=>state.shape)
+    
     const handleShapeChange = (e) => {
         
         dispatch({
@@ -15,6 +15,7 @@ function Wall() {
         });
 
     }
+    const shape = useSelector((state)=>state.shape)
 
     const handleWallAChange = (e) => {
         dispatch({
@@ -44,16 +45,16 @@ function Wall() {
             <label>
                 Shape
             </label>
-              <input onChange={handleShapeChange} type="radio" id="l-shaped" name="shape" value="l-shaped" />L-shaped
-              <input onChange={handleShapeChange} type="radio" id="u-shaped" name="shape" value="u-shaped" />U-shaped
-              <input onChange={handleShapeChange} type="radio" id="parallel" name="shape" value="parallel" />Parallel
-              <input onChange={handleShapeChange} type="radio" id="straight" name="shape" value="straight" />Straight
+              <input onChange={handleShapeChange} type="radio" id="l-shaped" name="shape" value="l-shaped" /><label htmlFor='l-shaped'>L-shaped</label>
+              <input onChange={handleShapeChange} type="radio" id="u-shaped" name="shape" value="u-shaped" /><label htmlFor='u-shaped'>U-shaped</label>
+              <input onChange={handleShapeChange} type="radio" id="parallel" name="shape" value="parallel" /><label htmlFor='parallel'>Parallel</label>
+              <input onChange={handleShapeChange} type="radio" id="straight" name="shape" value="straight" /><label htmlFor='straight'>Straight</label>
             </div>
 
-            <label>
-            Wall A
+            <label htmlFor='wallA'>
+            Wall A (ft)
             </label>
-            <select onChange={handleWallAChange} >
+            <select id='wallA' onChange={handleWallAChange} >
                     <option >5</option>
                     <option >6</option>
                     <option >7</option>
@@ -74,12 +75,12 @@ function Wall() {
              <br/>          
 
 
-           {  (shape === "u-shaped" || "parallel" || "l-shaped")   &&
+           {  (shape === "u-shaped" || shape==="parallel" || shape==="l-shaped")   &&
             <>
-                <label>
+                <label htmlFor='wallB'>
                   Wall B
                 </label>
-                <select onChange={handleWallBChange} >
+                <select id='wallB' onChange={handleWallBChange} >
                     <option >5</option>
                     <option >6</option>
                     <option >7</option>
@@ -102,10 +103,11 @@ function Wall() {
      
 
            { shape ==="u-shaped" && <>
-            <br/><label>
+            <br/>
+            <label htmlFor='wallC'>
             Wall C
             </label>
-            <select onChange={handleWallCChange} >
+            <select id='wallC' onChange={handleWallCChange} >
                     <option >5</option>
                     <option >6</option>
                     <option >7</option>

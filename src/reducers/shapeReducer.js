@@ -1,5 +1,5 @@
 
-const initialState = 'l-shaped'
+const initialState = 'straight'
 
 export default function shapeReducer(state=initialState, action){
     switch (action.type) {

@@ -1,12 +1,24 @@
 import React from 'react'
-import {useSelector} from 'react-redux';
+import Accessories from './CostCard/Accessories';
+import Material from './CostCard/Material';
+import TotalCost from './CostCard/TotalCost';
 import Wall from './CostCard/Wall';
+import WallMaterialCost from './CostCard/WallMaterialCost';
+
 function CostCard() {
-  const shape = useSelector((state)=> state.shape)
+
   return (
     <div className='cost-card'>
       <h2>Cost Card</h2>
       <Wall/>
+      <br/>
+      <Material/>
+      <br/>
+      <WallMaterialCost/>
+      <br/>
+      <Accessories/>
+       <br/> 
+      <TotalCost/>
 
     </div>
   )
