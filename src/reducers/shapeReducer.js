@@ -6,6 +6,9 @@ export default function shapeReducer(state=initialState, action){
         case 'SET_SHAPE' : {
             return action.payload
         }
+        // case 'UPDATE_SHAPE' : {
+        //     return (...state,{ action.payload})
+        // }
         default : {
             return state
         }

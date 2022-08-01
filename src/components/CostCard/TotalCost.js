@@ -45,9 +45,20 @@ function TotalCost() {
 
     return (
     <>
-     
+          <h3>Total Cost</h3>
           <p> Total Materials Cost: ${grossCost}</p>
           <p> Total Service Fee (20% of Material Cost)  : ${Math.floor(grossCost*0.2)} </p>
+
+
+          <hr
+          style={{
+            color: '#000000',
+            backgroundColor: '#ffffff',
+            height: .5,
+            borderColor : '#000000'}}
+          />
+
+          <h3> ${Math.floor(grossCost*0.2) + grossCost} </h3>
          
 
     </>

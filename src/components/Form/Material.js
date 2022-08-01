@@ -21,10 +21,11 @@ function Material() {
 
   return (
     <>
-        <label>
+    
+        <span style={{fontSize:20}}>
         Cabinet Material
-        </label>
-        <select onChange={handleCabinetMaterialChange} >
+        </span>
+        <select className="material-select" onChange={handleCabinetMaterialChange} >
                     <option > Particle Board</option>
                     <option > BWP-Ply</option>
                    
@@ -32,10 +33,10 @@ function Material() {
         
         <br/>
 
-        <label>
+        <span style={{fontSize:20}}>
         Shutter Material
-        </label>
-        <select onChange={handleShutterMaterialChange} >
+        </span>
+        <select className="material-select" onChange={handleShutterMaterialChange} >
                     <option > Particle Board Matte Laminate </option>
                     <option > BWP-Ply Matte Laminate </option>
                     <option > Particle Board Gloss Laminate </option>
@@ -46,6 +47,7 @@ function Material() {
         </select>
     
         <br/>
+        
 
     </>
   )

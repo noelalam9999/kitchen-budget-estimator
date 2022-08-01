@@ -12,19 +12,20 @@ function Wall() {
 
     return (
     <>
-          <p>Shape : {shape}</p>
+          <h3>Wall Measurements</h3>
+          <p>Shape : <span className='value'>{shape}</span></p>
 
-          <p>Wall A : {wallA}</p>
+        <>Dimentions: <span className='value'>{wallA}ft</span> </>
           
     
 
     { 
-     (shape === "u-shaped" || "parallel" || "l-shaped") &&
-          <p> Wall B : {wallB } </p>
+     (shape === "u-shaped" || shape=== "parallel" ||shape=== "l-shaped") &&
+          <> x{wallB }ft </>
     }
 
     { shape === "u-shaped" && 
-          <p> Wall C : {wallC} </p>
+          <> x{wallC}ft </>
     }
         
 

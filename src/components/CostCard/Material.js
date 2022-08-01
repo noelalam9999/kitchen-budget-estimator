@@ -6,14 +6,13 @@ function Material() {
     const cabinet = useSelector((state)=>state.cabinet);
     const shutter = useSelector((state)=>state.shutter);
 
-    console.log(cabinet)
     return (
     <>
-     
-          <p> Cabinet Material : {cabinet.name} </p>
-          <p> Unit Cost (sqft): ${cabinet.unitCost} </p>
-          <p> Shutter Material : {shutter.name} </p>
-          <p> Unit Cost (sqft): ${shutter.unitCost} </p>
+             <h3>Materials unit cost</h3>
+          <p> Cabinet  : {cabinet.name} (
+          <> ${cabinet.unitCost}/sqft) </></p>
+          <p> Shutter  : {shutter.name} (
+          <> ${shutter.unitCost}/sqft)</></p>
           
          
 

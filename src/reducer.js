@@ -1,5 +1,6 @@
 //@ts-check
 import { combineReducers } from 'redux'
+import accessoriesReducer from './reducers/accessoriesReducer'
 import cabinetMaterialReducer from './reducers/CabinetMaterialReducer'
 import shapeReducer from './reducers/shapeReducer'
 import shutterMaterialReducer from './reducers/ShutterMaterialReducer'
@@ -15,7 +16,8 @@ const rootReducer = combineReducers({
   wallB : wallBReducer,
   wallC : wallCReducer,
   shutter : shutterMaterialReducer,
-  cabinet : cabinetMaterialReducer
+  cabinet : cabinetMaterialReducer,
+  accessories : accessoriesReducer
   // filters: filtersReducer,
 })
 

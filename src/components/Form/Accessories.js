@@ -1,10 +1,11 @@
 import React, {useState} from 'react'
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import  Carousel  from 'react-simply-carousel'
+import Accessory from './Accessory';
 const accessories = [
   {
       id : 1,
-      name : "detergent holder and bin holder",
+      name : "Detergent holder and bin holder",
       image : "https://res.cloudinary.com/dl2tsdbcf/image/upload/v1659109204/Detergent_holder_and_bin_holder_srvdhk.jpg",
       width : 2,
       price : 400
@@ -25,21 +26,21 @@ const accessories = [
   },
   {
     id : 4,
-    name : "Bottle pull-out (300mm soft-close channels) designs",
+    name : "Bottle pull-out designs",
     image : "https://res.cloudinary.com/dl2tsdbcf/image/upload/v1659109204/Bottle_pullout_designs_ra3xsz.jpg",
     width : 3,
     price : 150
   },
   {
     id : 5,
-    name : "Tandem drawer (soft-close channels without gallery ) designs",
+    name : "Tandem drawer designs",
     image : "https://res.cloudinary.com/dl2tsdbcf/image/upload/v1659109204/Tandem_Drawer_designs_wbzgpz.jpg",
-    width : 1,
+    width : 4,
     price : 230
   },
   {
     id : 6,
-    name : "Microwave and otg provision with one shelf and one drawer designs",
+    name : "Microwave and otg provision",
     image : "https://res.cloudinary.com/dl2tsdbcf/image/upload/v1659109204/Microwave_and_otg_prg9ug.jpg",
     width : 3,
     price : 250
@@ -48,10 +49,13 @@ const accessories = [
 ]
 
 const arrowStyles = {
-  width: 30,
-  height: 30,
+  width: 50,
+  height: 50,
   minWidth: 30,
-  alignSelf: "center"
+  borderRadius: 25,
+  alignSelf: "center",
+  color: "#ffffff",
+  backgroundColor : "blue"
 }
 
 function Accessories() {
@@ -61,9 +65,9 @@ function Accessories() {
 
   return (
     <>
-        <label>
+        <h3>
         Accessories
-        </label>
+        </h3>
         <Carousel
         containerProps={{
           style: {
@@ -82,17 +86,12 @@ function Accessories() {
           children: "<",
           style: arrowStyles
         }}
-        itemsToShow={2}
+        itemsToShow={5}
         speed={400}
       >
-        {accessories.map(( accessorie) => (
+        {accessories.map(( accessorie,index) => (
           <>
-          <div
-            key={accessorie.id}
-          >
-            <img style={{width:"150px", margin: "5px"}} src={accessorie.image}/>
-            <input value="Add" type="button"/>
-          </div>
+            <Accessory id = {accessorie.id} image = {accessorie.image} name={accessorie.name} key={index} />
           
           </>
         ))}

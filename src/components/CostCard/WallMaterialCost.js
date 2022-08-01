@@ -2,9 +2,10 @@ import React from 'react';
 import { useSelector } from 'react-redux/es/exports';
 
 const marbelCost = 3;
+const tableWidth = 2;
 export const wallCost = (walllength, cabinet, shutter) => {
-      return (walllength * 2 * cabinet) + (2 * 3 * cabinet * 2) + (walllength * 3 * cabinet) + (marbelCost * walllength * 2) + (shutter * walllength * 3);
-}
+      return (walllength * tableWidth * cabinet) + (2 * 3 * cabinet * 2) + (walllength * 3 * cabinet) + (marbelCost * walllength * 2) + (shutter * walllength * 3);
+};
 
 
 

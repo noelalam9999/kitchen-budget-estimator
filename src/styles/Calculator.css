@@ -3,11 +3,11 @@
 }
 
 .form{
-    min-width: 30vw;
-    margin : 10vh 10vw
+    min-width:55vw;
+    margin : 3vh 5vw
 }
 
 .cost-card{
-    min-width:30vw;
-    margin: 10vh 10vw
+    min-width:15vw;
+    margin: 3vh 3vw
 }

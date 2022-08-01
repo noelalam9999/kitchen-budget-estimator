@@ -4,7 +4,7 @@ import Material from './CostCard/Material';
 import TotalCost from './CostCard/TotalCost';
 import Wall from './CostCard/Wall';
 import WallMaterialCost from './CostCard/WallMaterialCost';
-
+import '../styles/CostCard.css'
 function CostCard() {
 
   return (
