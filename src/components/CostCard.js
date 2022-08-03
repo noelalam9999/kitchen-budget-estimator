@@ -11,13 +11,12 @@ function CostCard() {
     <div className='cost-card'>
       <h2>Cost Card</h2>
       <Wall/>
-      <br/>
+      
       <Material/>
-      <br/>
       <WallMaterialCost/>
-      <br/>
+      
       <Accessories/>
-       <br/> 
+       
       <TotalCost/>
 
     </div>

@@ -1,10 +1,23 @@
-.form{
+/* .form{
     border : 1px solid rgb(0, 0, 0, 0.2);
     border-radius : 20px;
     background-color:rgb(232,223,205,0.7) ;
     box-shadow: 0px 1em 2em -1.5em rgba(0, 0, 0, .5);
     padding:10px;
     backdrop-filter: blur(5px);
+} */
+
+.accessories, .material, .wall, .title {
+    border : 1px solid rgb(0, 0, 0, 0.2);
+    border-radius : 20px;
+    background-color:rgb(232,223,205,0.7) ;
+    box-shadow: 0px 1em 2em -1.5em rgba(0, 0, 0, .5);
+    padding:10px;
+    backdrop-filter: blur(5px);
+}
+
+.title{
+    margin-bottom: 5vh;
 }
 
 .wall-select{
@@ -27,4 +40,62 @@
     border-radius: 3px;
     font-size: 17px;
     box-shadow: 0px 1em 2em -1.5em rgba(0, 0, 0, .5);
+}
+
+.shapes{
+    display : grid;
+    grid-template-columns: auto auto auto auto;
+}
+.shapes img{
+    width: 10vw;
+    height : 10vw;
+}
+.material{
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+}
+.accessories{
+    margin-bottom: 5vh;
+}
+
+.cabinet-tooltip{
+    position: relative;
+    display: inline-block;
+
+}
+.cabinet-tooltip .cabinet-tooltip-text{
+    visibility: hidden;
+    width : 300px;
+    background-color: black;
+    color : #ffffff;
+    text-align: center;
+    padding: 5px 0;
+    position : absolute; 
+    z-index: 1;
+    border-radius: 6px;
+}
+
+.cabinet-tooltip:hover .cabinet-tooltip-text{
+    visibility: visible;
+}
+
+.shutter-tooltip{
+    position: relative;
+    display: inline-block;
+
+}
+.shutter-tooltip .shutter-tooltip-text{
+    visibility: hidden;
+    width : 300px;
+    background-color: black;
+    color : #ffffff;
+    text-align: center;
+    padding: 5px 0;
+    position : absolute; 
+    z-index: 4;
+    border-radius: 6px;
+}
+
+.shutter-tooltip:hover .shutter-tooltip-text{
+    visibility: visible;
 }

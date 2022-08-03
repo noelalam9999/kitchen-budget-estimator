@@ -1,39 +1,39 @@
 const initialState = {
     id : 1, 
     name : 'Particle Board Matte Laminate',
-    unitCost : '3'
+    unitCost : 3
 }
 
 const materials = [
     {
         id : 1, 
         name : 'Particle Board Matte Laminate',
-        unitCost : '3'
+        unitCost : 3
     },
     {
         id: 2,
         name : 'BWP-Ply Matte Laminate',
-        unitCost : '4'
+        unitCost : 4
     },
     {
         id : 3, 
         name : 'Particle Board Gloss Laminate',
-        unitCost : '3'
+        unitCost : 3
     },
     {
         id: 4,
         name : 'MDF Matte Membrane',
-        unitCost : '4'
+        unitCost : 4
     },
     {
         id : 5, 
         name : 'BWP-Ply Gloss Laminate',
-        unitCost : '3'
+        unitCost : 3
     },
     {
         id: 6,
         name : 'MDF Gloss Membrane',
-        unitCost : '4'
+        unitCost : 4
     }
 ]
 

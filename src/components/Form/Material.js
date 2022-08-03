@@ -21,21 +21,42 @@ function Material() {
 
   return (
     <>
-    
+    <div className = "material">
+       
         <span style={{fontSize:20}}>
         Cabinet Material
         </span>
+        <span className='cabinet-tooltip'>
         <select className="material-select" onChange={handleCabinetMaterialChange} >
                     <option > Particle Board</option>
                     <option > BWP-Ply</option>
                    
         </select>
-        
+        <span className='cabinet-tooltip-text'>
+
+            <span>
+                Particle Board - <br/>
+                Usage : All kitchen Units except sink unit <br/>
+                Resistant to moisture <br/>
+                
+
+            </span>
+            <br/>
+            <span>
+                BWP-Ply  
+                <br/>
+                Usage : All kitchen units <br/>
+                Resistant to Water       
+            </span>    
+        </span>
+      
+        </span>
         <br/>
 
         <span style={{fontSize:20}}>
         Shutter Material
         </span>
+        <span className="shutter-tooltip">
         <select className="material-select" onChange={handleShutterMaterialChange} >
                     <option > Particle Board Matte Laminate </option>
                     <option > BWP-Ply Matte Laminate </option>
@@ -45,10 +66,31 @@ function Material() {
                     <option > MDF Gloss Membrane </option>
                    
         </select>
+        <span className='shutter-tooltip-text'>
+
+                <span>
+                    Particle Board - <br/>
+            
+                    Resistant to moisture <br/>
+                    
+
+                </span>
+                <br/>
+                <span>
+                    BWP-Ply  
+                    <br/>
+                   
+                    Resistant to Water       
+                </span>
+                <br/>    
+               
+                </span>
+
+        </span>
     
         <br/>
         
-
+    </div>
     </>
   )
 }

@@ -1,5 +1,5 @@
 
-const initialState = '5'
+const initialState = 5
 
 export default function wallBReducer(state=initialState, action){
     switch (action.type) {

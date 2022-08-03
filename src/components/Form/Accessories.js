@@ -2,13 +2,14 @@ import React, {useState} from 'react'
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import  Carousel  from 'react-simply-carousel'
 import Accessory from './Accessory';
+
 const accessories = [
   {
       id : 1,
       name : "Detergent holder and bin holder",
       image : "https://res.cloudinary.com/dl2tsdbcf/image/upload/v1659109204/Detergent_holder_and_bin_holder_srvdhk.jpg",
       width : 2,
-      price : 400
+      price : 200
   },
   {
     id : 2,
@@ -22,11 +23,11 @@ const accessories = [
     name : "Cutlery cup & saucer thali tray designs",
     image : "https://res.cloudinary.com/dl2tsdbcf/image/upload/v1659109204/Cutlery_tray_designs_hx0315.jpg",
     width : 4,
-    price : 300
+    price : 150
   },
   {
     id : 4,
-    name : "Bottle pull-out designs",
+    name : "Verticle Bottle pull-out designs",
     image : "https://res.cloudinary.com/dl2tsdbcf/image/upload/v1659109204/Bottle_pullout_designs_ra3xsz.jpg",
     width : 3,
     price : 150
@@ -34,9 +35,9 @@ const accessories = [
   {
     id : 5,
     name : "Tandem drawer designs",
-    image : "https://res.cloudinary.com/dl2tsdbcf/image/upload/v1659109204/Tandem_Drawer_designs_wbzgpz.jpg",
+    image : "https://res.cloudinary.com/dl2tsdbcf/image/upload/v1659353217/Tandem_Drawer_designs_npp4vd.jpg",
     width : 4,
-    price : 230
+    price : 170
   },
   {
     id : 6,
@@ -48,6 +49,18 @@ const accessories = [
 
 ]
 
+export const grossAccWidth = (selectedAccessories) => {
+  let acc = 0 
+  selectedAccessories.forEach((selectedAccessorie)=> 
+   { 
+    
+    const selectedAccessorie2 = accessories.filter((accessorie)=>accessorie.width === selectedAccessorie );
+    acc += selectedAccessorie2.width;
+  }
+  )
+  return acc;
+}
+
 const arrowStyles = {
   width: 50,
   height: 50,
@@ -55,7 +68,7 @@ const arrowStyles = {
   borderRadius: 25,
   alignSelf: "center",
   color: "#ffffff",
-  backgroundColor : "blue"
+  backgroundColor : "#540000cc"
 }
 
 function Accessories() {
@@ -65,6 +78,7 @@ function Accessories() {
 
   return (
     <>
+    <div className='accessories'>
         <h3>
         Accessories
         </h3>
@@ -90,13 +104,14 @@ function Accessories() {
         speed={400}
       >
         {accessories.map(( accessorie,index) => (
-          <>
-            <Accessory id = {accessorie.id} image = {accessorie.image} name={accessorie.name} key={index} />
           
-          </>
+            <Accessory accessory = { accessorie} id = {accessorie.id} image = {accessorie.image} name={accessorie.name} key={index} />
+          
+          
         ))}
       </Carousel>
-        
+
+       </div> 
     </>
   )
 }

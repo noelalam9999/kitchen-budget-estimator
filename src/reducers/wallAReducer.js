@@ -1,5 +1,5 @@
 
-const initialState = '5'
+const initialState = 5
 
 
 

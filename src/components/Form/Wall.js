@@ -1,6 +1,9 @@
 import React from 'react'
 import {useDispatch, useSelector} from 'react-redux';
 
+const shapeInputStyle = {margin:"0vw"};
+//const shapeStyle = {marginRight:"1.1vw",marginLeft:"1.1vw"};
+
 function Wall() {
 
     const dispatch = useDispatch();
@@ -38,27 +41,26 @@ function Wall() {
     }
 
   return (
-    <div>
+    <div className='wall'>
            
             <div className="shape">
-            <h3>
+                <br/>
+            <p style={{fontSize:20}}>
                 Shape
-            </h3>
-            <img style={{margin:"3px"}} height="150px" src="https://res.cloudinary.com/dl2tsdbcf/image/upload/v1659306489/l-shaped_y5zfws.jpg"/>
-            <img style={{margin:"3px"}} height="150px" src="https://res.cloudinary.com/dl2tsdbcf/image/upload/v1659306489/u-shaped_stnd2a.jpg"/>
-            <img style={{margin:"3px"}} height="150px" src="https://res.cloudinary.com/dl2tsdbcf/image/upload/v1659306489/parallel_eghssl.jpg"/>
-            <img style={{margin:"3px"}} height="150px" width="220px" src="https://res.cloudinary.com/dl2tsdbcf/image/upload/v1659306489/straight_a9egjw.jpg"/><br/>
+            </p>
 
-              <span style={{margin:"3vw"}}><input  onChange={handleShapeChange} type="radio" id="l-shaped" name="shape" value="l-shaped" /><label htmlFor='l-shaped'>L-shaped</label></span>
+              <div className = "shapes">
+              <div style={shapeInputStyle}> <img  width="120px" src="https://res.cloudinary.com/dl2tsdbcf/image/upload/v1659352869/l-shaped_zhwgjh.png"/><br/><input  onChange={handleShapeChange} type="radio" id="l-shaped" name="shape" value="l-shaped" /><label htmlFor='l-shaped'>L-shaped</label></div>
 
            
-              <span style={{margin:"3vw"}}><input  onChange={handleShapeChange} type="radio" id="u-shaped" name="shape" value="u-shaped" /><label htmlFor='u-shaped'>U-shaped</label></span>
+              <div style={shapeInputStyle}> <img  width="120vw" src="https://res.cloudinary.com/dl2tsdbcf/image/upload/v1659352869/u-shaped_gftoxk.png"/><br/><input  onChange={handleShapeChange} type="radio" id="u-shaped" name="shape" value="u-shaped" /><label htmlFor='u-shaped'>U-shaped</label></div>
 
             
-              <span style={{margin:"3vw"}}> <input  onChange={handleShapeChange} type="radio" id="parallel" name="shape" value="parallel" /><label htmlFor='parallel'>Parallel</label></span>
+              <div style={shapeInputStyle}> <img  height="120px" src="https://res.cloudinary.com/dl2tsdbcf/image/upload/v1659352869/parallel_prncwg.png"/> <br/><input  onChange={handleShapeChange} type="radio" id="parallel" name="shape" value="parallel" /><label htmlFor='parallel'>Parallel</label></div>
 
            
-              <span style={{margin:"3vw"}}> <input  onChange={handleShapeChange} type="radio" id="straight" name="shape" value="straight" /><label htmlFor='straight'>Straight</label></span>
+              <div style={shapeInputStyle}>  <img height="120px" src="https://res.cloudinary.com/dl2tsdbcf/image/upload/v1659354074/straight_gwuijl.png"/><br/><input  onChange={handleShapeChange} type="radio" id="straight" name="shape" value="straight" /><label htmlFor='straight'>Straight</label></div>
+              </div>
             </div>
 
         <div style={{display:"flex", justifyContent:"center"}}>

@@ -1,19 +1,19 @@
 const initialState = {
     id : 1, 
     name : 'Particle Board',
-    unitCost : '3'
+    unitCost : 3
 }
 
 const materials = [
     {
         id : 1, 
         name : 'Particle Board',
-        unitCost : '3'
+        unitCost : 3
     },
     {
         id: 2,
         name : 'BWP-Ply',
-        unitCost : '4'
+        unitCost : 4
     }
 ]
 

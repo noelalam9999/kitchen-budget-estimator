@@ -5,16 +5,23 @@ export default function accessoriesReducer(state=initialState, action){
         case 'ADD_ACCESSORIES' : {
             
             return [...state,action.payload];
+
         }
         case 'DEDUCT_ACCESSORIES' : {
 
-            if (state.indexOf(action.payload)!=null && state.length>0){
-                const new_state = state.splice(state.indexOf(action.payload),0);
-                console.log(new_state)
-                return  state;  
+
+                const index = state.lastIndexOf(action.payload)
+              
+               if( index === 0 ) return initialState;
+
+               if (index && state.length>0){
+     
+                state.splice(index,1)
+                console.log(state)
+                return state;  
             }
             
-            return state
+            return state;
             
         }
         default : {

@@ -1,6 +1,7 @@
 import React from 'react';
 import { useSelector } from 'react-redux/es/exports';
 import { wallCost } from './WallMaterialCost';
+import { grossAccPrice } from './Accessories';
 
 const marbelCost = 3;
 
@@ -10,7 +11,7 @@ const totalCost = ( sumWallCost, cabinet, shutter, shape ) => {
       return sumWallCost[0] + sumWallCost[1] - (marbelCost * 2 * 2) - (2 * 3 * shutter * 2) - (2 * 3 * cabinet * 2); 
   }
   if (shape =="u-shaped") {
-      return sumWallCost[0] + sumWallCost[1] + sumWallCost[2] - ((marbelCost * 2 * 2) - (2 * 3 * shutter * 2) - (2 * 3 * cabinet * 2)) * 2;
+      return sumWallCost[0] + sumWallCost[1] + sumWallCost[2] - ((marbelCost * 2 * 2) + (2 * 3 * shutter * 2) + (2 * 3 * cabinet * 2)) * 2;
   }
   if (shape =="parallel") {
       return sumWallCost[0] + sumWallCost[1];
@@ -36,7 +37,9 @@ function TotalCost() {
     const wallACost = wallCost(wallA, cabinet.unitCost, shutter.unitCost);
     const wallBCost = wallCost(wallB, cabinet.unitCost, shutter.unitCost);
     const wallCCost = wallCost(wallC, cabinet.unitCost, shutter.unitCost);
+    const accessories = useSelector((state)=>state.accessories);
 
+    const totalPrice = grossAccPrice(accessories) 
     const sumWallCost = [wallACost, wallBCost,  wallCCost];
     
     const grossCost = totalCost(sumWallCost, cabinet.unitCost, shutter.unitCost, shape)
@@ -58,7 +61,7 @@ function TotalCost() {
             borderColor : '#000000'}}
           />
 
-          <h3> ${Math.floor(grossCost*0.2) + grossCost} </h3>
+          <h3> ${Math.floor(grossCost*0.2) + grossCost + totalPrice} </h3>
          
 
     </>

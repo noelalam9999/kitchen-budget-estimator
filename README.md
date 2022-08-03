@@ -54,3 +54,6 @@ https://codesandbox.io/s/stoic-cohen-d7cyj?fontsize=14&hidenavigation=1&theme=da
 
 The redux
 https://redux.js.org/tutorials/fundamentals/part-5-ui-react
+
+Setting up eslint 
+https://dev.to/knowankit/setup-eslint-and-prettier-in-react-app-357b
